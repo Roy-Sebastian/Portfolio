@@ -12,7 +12,7 @@ import { HomeIcon } from 'lucide-react';
 export const DATA = {
   name: 'Roy Sebastian Surbakti',
   initials: 'RS',
-  url: 'http://localhost:3000',
+  url: 'https://portfolio-m691v501o-sebastian-604c.vercel.app',
   location: 'Indonesia',
   locationLink: '#',
   description:
