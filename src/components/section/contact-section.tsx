@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { DATA } from "@/data/resume";
+import { Icons } from "@/components/icons";
 
 export default function ContactSection() {
   return (
@@ -24,18 +25,26 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
+          Want to chat? Just shoot me a message on LinkedIn, WhatsApp or Email
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-1">
           <Link
-            href={DATA.contact.social.X.url}
+            href="mailto:roysurbakti23@gmail.com"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground shadow-xs transition-colors hover:bg-muted hover:text-foreground"
+          >
+            <Icons.email className="size-3.5" />
+            roysurbakti23@gmail.com
+          </Link>
+          <Link
+            href="https://wa.me/6285267773968"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground shadow-xs transition-colors hover:bg-muted hover:text-foreground"
           >
-            with a direct question on twitter
-          </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
-        </p>
+            <Icons.whatsapp className="size-4 " />
+            085267773968
+          </Link>
+        </div>
       </div>
     </div>
   );

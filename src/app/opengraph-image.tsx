@@ -108,8 +108,12 @@ const styles = {
 export default async function Image() {
     try {
         const fontData = await getFontData();
+        const baseUrl =
+            DATA.url && (DATA.url.startsWith("http://") || DATA.url.startsWith("https://"))
+                ? DATA.url
+                : "http://localhost:3000";
         const imageUrl = DATA.avatarUrl
-            ? new URL(DATA.avatarUrl, DATA.url).toString()
+            ? new URL(DATA.avatarUrl, baseUrl).toString()
             : undefined;
 
         return new ImageResponse(

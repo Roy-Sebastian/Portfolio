@@ -11,7 +11,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
   if (!src || imageError) {
     return (
       <div className="size-16 border border-border/40 rounded-full shadow-xs bg-muted flex items-center justify-center font-semibold text-base text-muted-foreground flex-none shrink-0 overflow-hidden">
-        {alt ? alt.charAt(0) : 'W'}
+        {alt ? alt.charAt(0) : 'O'}
       </div>
     );
   }
@@ -28,44 +28,44 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-export default function WorkSection() {
+export default function OrganizationSection() {
   return (
     <div className="w-full flex flex-col gap-6">
-      {DATA.work.map((work) => (
-        <div key={work.company} className="w-full flex flex-col gap-2">
+      {DATA.organization.map((item) => (
+        <div key={item.company} className="w-full flex flex-col gap-2">
           <div className="flex items-center gap-x-3 justify-between w-full text-left">
             <div className="flex items-center gap-x-3 flex-1 min-w-0">
-              <LogoImage src={work.logoUrl} alt={work.company} />
+              <LogoImage src={item.logoUrl} alt={item.company} />
               <div className="flex-1 min-w-0 gap-0.5 flex flex-col">
                 <div className="font-semibold leading-none flex items-center gap-2">
-                  {work.href ? (
+                  {item.href ? (
                     <Link
-                      href={work.href}
+                      href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 hover:underline group"
                     >
-                      <span>{work.company}</span>
+                      <span>{item.company}</span>
                       <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </Link>
                   ) : (
-                    <span>{work.company}</span>
+                    <span>{item.company}</span>
                   )}
                 </div>
                 <div className="font-sans text-sm text-muted-foreground">
-                  {work.title}
+                  {item.title}
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
               <span>
-                {work.start} - {work.end ?? 'Present'}
+                {item.start} - {item.end ?? 'Present'}
               </span>
             </div>
           </div>
-          {work.description && (
+          {item.description && (
             <div className="ml-[76px] text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
-              {work.description}
+              {item.description}
             </div>
           )}
         </div>

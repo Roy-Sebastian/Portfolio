@@ -20,8 +20,13 @@ const geistMono = Geist_Mono({
   variable: "--font-mono",
 });
 
+const baseUrl =
+  DATA.url && (DATA.url.startsWith("http://") || DATA.url.startsWith("https://"))
+    ? DATA.url
+    : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL(baseUrl),
   title: {
     default: DATA.name,
     template: `%s | ${DATA.name}`,

@@ -44,6 +44,11 @@ export async function generateMetadata({
     image,
   } = post;
 
+  const baseUrl =
+    DATA.url && (DATA.url.startsWith("http://") || DATA.url.startsWith("https://"))
+      ? DATA.url
+      : "http://localhost:3000";
+
   return {
     title,
     description,
@@ -52,11 +57,11 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `${DATA.url}/blog/${slug}`,
+      url: `${baseUrl}/blog/${slug}`,
       ...(image && {
         images: [
           {
-            url: `${DATA.url}${image}`,
+            url: `${baseUrl}${image}`,
           },
         ],
       }),
@@ -66,7 +71,7 @@ export async function generateMetadata({
       title,
       description,
       ...(image && {
-        images: [`${DATA.url}${image}`],
+        images: [`${baseUrl}${image}`],
       }),
     },
   };
@@ -96,6 +101,11 @@ export default async function Blog({
   const getSlug = (post: (typeof sortedPosts)[0]) =>
     post._meta.path.replace(/\.mdx$/, "");
 
+  const baseUrl =
+    DATA.url && (DATA.url.startsWith("http://") || DATA.url.startsWith("https://"))
+      ? DATA.url
+      : "http://localhost:3000";
+
   const jsonLdContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -104,9 +114,9 @@ export default async function Blog({
     dateModified: post.publishedAt,
     description: post.summary,
     image: post.image
-      ? `${DATA.url}${post.image}`
-      : `${DATA.url}/blog/${slug}/opengraph-image`,
-    url: `${DATA.url}/blog/${slug}`,
+      ? `${baseUrl}${post.image}`
+      : `${baseUrl}/blog/${slug}/opengraph-image`,
+    url: `${baseUrl}/blog/${slug}`,
     author: {
       "@type": "Person",
       name: DATA.name,
