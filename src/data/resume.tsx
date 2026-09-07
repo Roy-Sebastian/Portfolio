@@ -241,6 +241,16 @@ export const DATA = {
 
   certificates: [
     {
+      title: 'ITERA English Proficiency Test (InciTe)',
+      issuer: 'Language Center, Institut Teknologi Sumatera',
+      date: 'Februari 2026 - Februari 2027',
+      credentialId: '2153/IT9.4.2/TA.00.04/2026',
+      credentialUrl: '#',
+      images: [
+        '/Sertifikat/toefl.jpg',
+      ],
+    },
+    {
       title: 'Belajar Back-End Pemula dengan JavaScript',
       issuer: 'Dicoding Indonesia',
       date: 'Desember 2024',
