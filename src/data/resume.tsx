@@ -261,7 +261,7 @@ export const DATA = {
       date: '01 November 2026',
       credentialId: 'DdBZChGXis',
       credentialUrl: '#',
-      images: ['/Sertifikat/golang_page-0001'],
+      images: ['/Sertifikat/golang_page-0001.jpg'],
     },
     {
       title: 'ITERA English Proficiency Test (InciTe)',
