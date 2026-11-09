@@ -1,5 +1,4 @@
 import { Icons } from '@/components/icons';
-import { Docker } from '@/components/ui/svgs/docker';
 import { Golang } from '@/components/ui/svgs/golang';
 import { Laravel } from '@/components/ui/svgs/laravel';
 import { NextjsIconDark } from '@/components/ui/svgs/nextjsIconDark';
@@ -106,9 +105,37 @@ export const DATA = {
 
   projects: [
     {
-      title: 'Todo REST API with Go — Authentication, Redis & PostgreSQL',
-      href: 'https://github.com/Roy-Sebastian/Todo-Management-REST-API---Go-PostgreSQL-Redis-Authentication',
+      title: 'Microservice Golang: Online Soccer Field Booking',
+      href: 'https://github.com/Roy-Sebastian/Go-Soccer',
       dates: '2026 - Now',
+      active: true,
+      description:
+        'A web-based soccer field booking system developed to help manage reservations, payments, and scheduling.',
+      technologies: [
+        'Golang',
+        'Gin',
+        'GORM',
+        'PostgreSQL',
+        'Kafka',
+        'Docker',
+        'Jenkins',
+        'Midtrans',
+      ],
+      links: [
+        {
+          type: 'Source',
+          href: 'https://github.com/Roy-Sebastian/Go-Soccer',
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: '',
+      images: [],
+      video: '',
+    },
+    {
+      title: 'Todo REST API with Go — Authentication & PostgreSQL',
+      href: 'https://github.com/Roy-Sebastian/Todo_Management_GO.git',
+      dates: '2026',
       active: true,
       description:
         'A web-based todo list application developed to help manage tasks, track progress, and stay organized.',
@@ -116,7 +143,7 @@ export const DATA = {
       links: [
         {
           type: 'Source',
-          href: 'https://github.com/Roy-Sebastian/GO-crud-gin',
+          href: 'https://github.com/Roy-Sebastian/Todo_Management_GO.git',
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -153,7 +180,7 @@ export const DATA = {
       ],
       video: '',
     },
-    
+
     {
       title: 'PERN Stack Todo Application',
       href: 'https://github.com/Roy-Sebastian/belajar-PERN',
@@ -161,13 +188,7 @@ export const DATA = {
       active: true,
       description:
         'A web-based todo list application developed to help manage tasks, track progress, and stay organized.',
-      technologies: [
-        'Node.js',
-        'Express.js',
-        'React.js',
-        'PostgreSQL',
-        
-      ],
+      technologies: ['Node.js', 'Express.js', 'React.js', 'PostgreSQL'],
       links: [
         {
           type: 'Source',
@@ -186,13 +207,7 @@ export const DATA = {
       active: true,
       description:
         'A web-based pharmacy management system built with Laravel 11 and Spatie User Roles to handle medicine inventory, user permissions, transactions, and sales reporting.',
-      technologies: [
-        'Laravel',
-        'PHP',
-        'Spatie',
-        'Tailwind',
-        'PostgreSQL',
-      ],
+      technologies: ['Laravel', 'PHP', 'Spatie', 'Tailwind', 'PostgreSQL'],
       links: [
         {
           type: 'Source',
@@ -241,14 +256,20 @@ export const DATA = {
 
   certificates: [
     {
+      title: 'Mastering Microservice Golang: Online Soccer Field Booking',
+      issuer: 'BuildWithAngga',
+      date: '01 November 2026',
+      credentialId: 'DdBZChGXis',
+      credentialUrl: '#',
+      images: ['/Sertifikat/golang_page-0001'],
+    },
+    {
       title: 'ITERA English Proficiency Test (InciTe)',
       issuer: 'Language Center, Institut Teknologi Sumatera',
       date: 'Februari 2026 - Februari 2027',
       credentialId: '2153/IT9.4.2/TA.00.04/2026',
       credentialUrl: '#',
-      images: [
-        '/Sertifikat/toefl.jpg',
-      ],
+      images: ['/Sertifikat/toefl.jpg'],
     },
     {
       title: 'Belajar Back-End Pemula dengan JavaScript',
